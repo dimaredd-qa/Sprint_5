@@ -1,11 +1,10 @@
 import random
 import string
-#здесь будут данные логин пароль для тестов и юрлки
+
 class Credential:
     name = 'Slipenberg'
     email = 'slipenberg25062025@yandex.ru'
     password = '11112222'
-
 
 class Site:
     main_site = 'https://stellarburgers.nomoreparties.site/'
@@ -16,9 +15,7 @@ class Site:
     #Лента заказов
     table_order = f'{main_site}feed'
 
-
 class RandomEmailPassword:
-
     def __init__(self):
         self.name = None
         self.email = None
@@ -40,9 +37,3 @@ class RandomEmailPassword:
             self.password = ''.join(random.choices(string.ascii_letters + string.digits, k=password_length))
 
         return self.name, self.email, self.password
-
-#Проверка генерации
-#generator = RandomEmailPassword()
-#email, password = generator.generate()
-#print("Email:", email)
-#print("Password:", password)
